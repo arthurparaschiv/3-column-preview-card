@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/arthurparaschiv/3-column-preview-card)
+- Live Site URL: [Live url(https://3-column-preview-card-beta-two.vercel.app)
 
 ### Built with
 
