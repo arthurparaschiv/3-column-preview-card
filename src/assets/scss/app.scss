@@ -1,5 +1,126 @@
+@use "base/colors";
+
+// * {
+//   box-sizing: content-box;
+// }
+
+h1,
+p,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+}
+
+body {
+  font-size: 15px;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: colors.$light-gray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columns {
+  max-width: 920px;
+  padding: 24px;
+
+  .column {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      max-width: 64px;
+    }
+
+    h1 {
+      font-family: "Big Shoulders Display", cursive;
+      text-transform: uppercase;
+      color: colors.$light-gray;
+      font-size: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    p {
+      font-family: "Lexend Deca", sans-serif;
+      color: colors.$white-750;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      line-height: 1.5rem;
+    }
+
+    &:nth-child(1) {
+      background-color: colors.$bright-orange;
+
+      a {
+        color: colors.$bright-orange;
+      }
+
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    &:nth-child(2) {
+      background-color: colors.$dark-cyan;
+
+      a {
+        color: colors.$dark-cyan;
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: colors.$very-dark-cyan;
+
+      a {
+        color: colors.$very-dark-cyan;
+      }
+
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    a {
+      font-family: "Lexend Deca", sans-serif;
+      background-color: colors.$light-gray;
+      padding: calc(1rem - 2px) calc(2rem - 2px);
+      border-radius: 2rem;
+      display: inline-block;
+      text-decoration: none;
+      border: 2px solid transparent;
+      margin-top: auto;
+      align-self: flex-start;
+
+      &:hover {
+        background-color: transparent;
+        color: colors.$white-750;
+        border-color: colors.$white-750;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .columns {
+    display: flex;
+
+    .column {
+      width: calc(100% / 3);
+
+      p {
+        margin-bottom: 80px;
+      }
+
+      &:nth-child(1) {
+        border-radius: 0.5rem 0 0 0.5rem;
+      }
+
+      &:nth-child(3) {
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+    }
+  }
 }
